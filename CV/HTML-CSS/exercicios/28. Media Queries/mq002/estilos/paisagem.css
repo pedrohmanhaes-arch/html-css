@@ -1,3 +1,9 @@
 @charset "UTF-8";
 
 /*Aparelho deitado (landscape) */
+
+body{
+    background-image: url(../imagens/pexels-cottonbro-5054213.jpg.jpg) ;
+    background-size: cover;
+   
+}

@@ -1,3 +1,8 @@
 @charset "UTF-8";
 
 /* Aparelho em pé (portrait) */
+
+body{
+    background-image: url(../imagens/photo-1512850183-6d7990f42385.avif);
+    background-size: contain;
+}
