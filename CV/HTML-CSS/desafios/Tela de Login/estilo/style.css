@@ -37,12 +37,14 @@ section#login{
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.435);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 
 }
 
 section#login > div#imagem{
     display: block;
-    background: #5f2c82 url(../Imagens/pexels-victormoragriega-29738137.jpg) no-repeat;
+    background: #5f2c82 url(../Imagens/pexels-jonathanborba-36299855.jpg) no-repeat;
     background-size: cover;
     height: 200px;
 }
