@@ -10,7 +10,10 @@
 <body>
     <header>
         <h1>Meu Site</h1>
-        <nav>
+            <button id="menu-button">☰</button>
+
+            <nav id="menu">
+
             <a href="#">Opção 1</a>
             <a href="#">Opção 2</a>
             <a href="#">Opção 3</a>
@@ -29,5 +32,14 @@
         Quisquam, exercitationem nesciunt velit tenetur vitae ducimus animi modi quibusdam ratione. Temporibus, totam. Eius amet quibusdam cupiditate ipsum magni corporis iusto sequi temporibus nihil perspiciatis placeat eveniet, sint fugiat aspernatur.
         Ipsum, in accusamus ab expedita pariatur repellendus. Maiores vero odio, ad sequi eligendi non voluptate ullam inventore optio quam saepe possimus illum ratione iusto velit nulla! Quidem voluptatem minima ullam!</p>
     </main>
+
+    <script>
+    const botao = document.querySelector('#menu-button');
+    const menu = document.querySelector('#menu');
+
+    botao.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
