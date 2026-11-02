@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 *{
     margin: 0px;
     padding: 0px;
@@ -24,12 +26,10 @@ header{
 }
 
 header > h1{
-    border: 1px dotted black;
     flex: 0 0 200px;
 }
 
 header > nav{
-    border: 1px dotted black;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -58,5 +58,4 @@ main{
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.361);
 }
-
 
