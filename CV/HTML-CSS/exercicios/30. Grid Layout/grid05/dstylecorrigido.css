@@ -1,13 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .container{
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 100px 50px 300px 50px;
-    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 50px 1fr 50px;
+    grid-template-columns: 1fr 150px;
     gap: 5px;
 }
 
 .caixa{
     background-color: lightgrey;
     border: 1px solid black;
+    color: white;
+    text-size-adjust: bold;
 }
 
 #topo{
@@ -41,7 +50,7 @@
 }
 
 #secundario{
-    background-color: rgb(241, 241, 20);
+    background-color: rgb(241, 153, 20);
     grid-area: 3 / 2 / 4 / -1;
     text-align: center;
     display: flex;
