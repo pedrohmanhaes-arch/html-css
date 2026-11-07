@@ -1,63 +1,92 @@
-/*******************************
-Estrutura / Layout
-*/
-body{
+
+@charset "UTF-8";
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#cabecalho{
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+.container {
+    width: 1145px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 1.4rem 0;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+#cabecalho {
     background-color: #c5e3fe;
     border-bottom: 1px solid black;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
 }
 
-.container{
-    width: 1145px;
-    margin: 0 auto;
-    padding: 1.4rem 0;
+#cabecalho .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 ul#menu {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 475px;
-    float: right;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-ul#menu li a{
-    float: left;
+ul#menu li a {
+    display: block;
     color: black;
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
 }
 
-ul#menu li a:hover{
+ul#menu li a:hover {
     color: #4c799f;
 }
 
-ul#menu li.destaque a{
+ul#menu li.destaque a {
     color: white;
-    background: black; 
+    background: black;
     border-radius: 1.2rem;
 }
 
-ul#menu li.destaque a:hover{
+ul#menu li.destaque a:hover {
     color: #c5e3fe;
 }
-/* Área de destaque */
-#destaque{
+
+/* =========================
+   ÁREA DE DESTAQUE
+========================= */
+
+#destaque {
     background-color: #c5e3fe;
     border-bottom: 1px solid black;
-    margin-top: 4.7rem;
+    margin-top: 5.2rem;
 }
 
-#area-destaque{
+#destaque .container {
+    padding: 3rem 0;
+}
+
+#area-destaque {
     width: 55%;
 }
 
@@ -69,33 +98,30 @@ ul#menu li.destaque a:hover{
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     background-color: white;
+    cursor: pointer;
 }
 
-.fundo-destaque{
+.fundo-destaque {
     background: url(../img/fundo-topo.png) no-repeat right bottom;
     background-size: 22rem;
 }
 
-#tendencias{
+/* =========================
+   TENDÊNCIAS
+========================= */
+
+#tendencias {
     padding-top: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
 }
 
-#tendencias::after{
-    content: " ";
-    display: table;
-    clear: both;
-}
-    
-
-
-
-.item-tendencia{
-    width: 26%;
-    padding-left: 7%;
-    margin-bottom: 2rem;
+.item-tendencia {
+    padding-left: 3.5rem;
+    margin-bottom: 1rem;
     position: relative;
-    float: left;
-    
+    min-width: 0;
 }
 
 .numero {
@@ -107,70 +133,205 @@ ul#menu li.destaque a:hover{
     left: 0;
 }
 
-#rodape{
+/* =========================
+   RODAPÉ
+========================= */
+
+#rodape {
     background-color: #c5e3fe;
     border-bottom: 1px solid black;
-    
+    margin-top: 2rem;
 }
 
+/* =========================
+   TIPOGRAFIA
+========================= */
 
-
-/*******************************
-Tipografia
-*/
-
-h1{
+h1 {
     font-size: 4rem;
     font-weight: 100;
     margin: 0;
     letter-spacing: -0.1rem;
 }
 
-h2{
+h2 {
     font-size: 0.8rem;
     text-transform: uppercase;
 }
 
-.titulo-tendencia{
+.titulo-tendencia {
     background: url(../img/icone-tendencia.png) no-repeat left / contain;
     padding: 0.2rem 0 0.2rem 2rem;
-
 }
 
-h3, h4{
+h3, h4 {
     margin: 0.2rem;
 }
 
-h4{
+h4 {
     font-weight: 100;
 }
 
-.icone1  {
+.icone1 {
     background: url(../img/icone1.png) no-repeat left / contain;
-    padding-left: 1.5rem ;
+    padding-left: 1.5rem;
 }
 
-.icone2  {
+.icone2 {
     background: url(../img/icone2.png) no-repeat left / contain;
-    padding-left: 1.5rem ;
+    padding-left: 1.5rem;
 }
 
-.icone3  {
+.icone3 {
     background: url(../img/icone3.png) no-repeat left / contain;
-    padding-left: 1.5rem ;
+    padding-left: 1.5rem;
 }
 
-.icone4  {
+.icone4 {
     background: url(../img/icone4.png) no-repeat left / contain;
-    padding-left: 1.5rem ;
+    padding-left: 1.5rem;
 }
 
-.icone5  {
+.icone5 {
     background: url(../img/icone5.png) no-repeat left / contain;
-    padding-left: 1.5rem ;
+    padding-left: 1.5rem;
 }
 
-.icone6  {
+.icone6 {
     background: url(../img/icone6.png) no-repeat left / contain;
-    padding-left: 1.5rem ;
+    padding-left: 1.5rem;
+}
+
+/* =================================
+   TABLET
+   601px até 1024px
+================================= */
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .container {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    #cabecalho .container {
+        gap: 1rem;
+    }
+
+    ul#menu li a {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    #area-destaque {
+        width: 65%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .fundo-destaque {
+        background-size: 17rem;
+    }
+
+    #tendencias {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+}
+
+/* =================================
+   CELULAR
+   Até 600px
+================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* CABEÇALHO */
+
+    #cabecalho {
+        position: relative;
+    }
+
+    #cabecalho .container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    #cabecalho img {
+        width: 130px;
+    }
+
+    ul#menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+
+    ul#menu li a {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* DESTAQUE */
+
+    #destaque {
+        margin-top: 0;
+    }
+
+    #destaque .container {
+        padding: 2rem 0;
+    }
+
+    #area-destaque {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        letter-spacing: -0.05rem;
+    }
+
+    #area-destaque span {
+        display: block;
+        margin-top: 1rem;
+        line-height: 1.5;
+    }
+
+    .fundo-destaque {
+        background-size: 10rem;
+        background-position: right bottom;
+    }
+
+    #destaque button {
+        margin-top: 1.2rem;
+    }
+
+    /* TENDÊNCIAS */
+
+    #tendencias {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .item-tendencia {
+        padding-left: 3.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .numero {
+        font-size: 2.5rem;
+    }
+
+    /* RODAPÉ */
+
+    #rodape {
+        margin-top: 1.5rem;
+    }
+
 }
